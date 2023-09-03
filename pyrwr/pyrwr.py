@@ -32,6 +32,7 @@ class PyRWR:
         Perform row-normalization of the adjacency matrix
         '''
         if self.normalized is False:
-            nA = normalizer.row_normalize(self.A)
+            nA = self.A
+            # nA = normalizer.row_normalize_uncertain(self.A)
             self.nAT = nA.T
             self.normalized = True
